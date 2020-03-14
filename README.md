@@ -12,7 +12,7 @@ This work requires tensorflow, tflearn, scipy, matplotlib, opencv2 and tensorboa
 
 In 'videodatasets/', we describe how to generate video datasets.
 
-1. Clone vmaf repo and checkout version 1.3.9 (available on the `v1.3.9` tag). for computing vmaf score: git clone https://github.com/Netflix/vmaf, then install it.
+1. Clone the vmaf git repository and checkout version 1.3.9 (available on the `v1.3.9` tag). for computing vmaf score: git clone https://github.com/Netflix/vmaf, then install it.
 2. Copy the 'videodatasets' folder to the 'vmaf' folder.
 3. Download several video clips into 'videodatasets/mov' folders, and the video MUST be encoded as h.264 format.
 4. Run 'trans.py' for transcoding 'mp4' video format to 'flv'.
@@ -30,7 +30,7 @@ run `which ffmpeg` from the commmand line to find your path to `ffmpeg` and add 
 ## QARC-basic
 The traditional QARC method is composed of two modules: VQPN and VQRL.
 
-### VQPN(Video Quality Prediction Network)
+### VQPN (Video Quality Prediction Network)
 To run and evaluate VQPN, you should follow these steps.
 
 1. Copy the '*.h5' training dataset and test dataset from 'videodatasets/' to 'QARC/VQPN'
