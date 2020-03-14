@@ -10,7 +10,7 @@ Real-time video streaming is now one of the main applications in all network env
 The current codebase runs on Python 2.7. This work requires tensorflow, tflearn, scipy, matplotlib, opencv2 and tensorboard. Please install these package before using QARC. 
 
 ```
-pip install tensorflow tflearn scipy==1.2.2 matplotlib opencv-python tensorboard
+pip install tensorflow==1.15 tflearn scipy==1.2.2 matplotlib opencv-python tensorboard
 ```
 
 ## Video datasets
