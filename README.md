@@ -9,9 +9,10 @@ Real-time video streaming is now one of the main applications in all network env
 This work requires tensorflow, tflearn, scipy, matplotlib, opencv2 and tensorboard. Please install these package before using QARC.
 
 ## Video datasets
+
 In 'videodatasets/', we describe how to generate video datasets.
 
-1. Clone vmaf repo. for computing vmaf score: git clone https://github.com/Netflix/vmaf, then install it.
+1. Clone vmaf repo and checkout version 1.3.9 (available on the `v1.3.9` tag). for computing vmaf score: git clone https://github.com/Netflix/vmaf, then install it.
 2. Copy the 'videodatasets' folder to the 'vmaf' folder.
 3. Download several video clips into 'videodatasets/mov' folders, and the video MUST be encoded as h.264 format.
 4. Run 'trans.py' for transcoding 'mp4' video format to 'flv'.
