@@ -30,7 +30,7 @@ FFMPEG_PATH = "[path to exec]/ffmpeg"
 
 run `which ffmpeg` from the commmand line to find your path to `ffmpeg` and add it to the `externals.py` file as noted.
 
-6. Type 'process-vmaf.py' to generate h5py file for training.
+6. Run `process-vmaf.py` to generate a h5py file for training. Note this script expects frame image files from the previous step to be in a subdirectory named `img/<original_video_filename>/`. E.g., if the original file was `1.mp4`, then it expects frame image files to be under `img/1.mp4/`.
 
 ## QARC-basic
 The traditional QARC method is composed of two modules: VQPN and VQRL.
