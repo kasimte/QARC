@@ -16,7 +16,15 @@ In 'videodatasets/', we describe how to generate video datasets.
 2. Copy the 'videodatasets' folder to the 'vmaf' folder.
 3. Download several video clips into 'videodatasets/mov' folders, and the video MUST be encoded as h.264 format.
 4. Run 'trans.py' for transcoding 'mp4' video format to 'flv'.
-5. Run 'main.py' for generating video datasets including logs and video frames.
+5. Run 'main.py' for generating video datasets including logs and video frames. If you encounter the following error,
+
+```
+Must install ffmpeg and set FFMPEG_PATH in vmaf/python/src/vmaf/externals.py, e.g. add a line like
+FFMPEG_PATH = "[path to exec]/ffmpeg"
+```
+
+run `which ffmpeg` from the commmand line to find your path to `ffmpeg` and add it to the `externals.py` file as noted.
+
 6. Type 'process-vmaf.py' to generate h5py file for training.
 
 ## QARC-basic
