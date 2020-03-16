@@ -14,14 +14,23 @@ pip install tensorflow tflearn scipy==1.2.2 matplotlib opencv-python tensorboard
 ```
 
 ## Video datasets
+
 In 'videodatasets/', we describe how to generate video datasets.
 
-1. Clone vmaf repo. for computing vmaf score: git clone https://github.com/Netflix/vmaf, then install it.
+1. Clone the vmaf git repository and checkout version 1.3.9 (available on the `v1.3.9` tag). for computing vmaf score: git clone https://github.com/Netflix/vmaf, then install it.
 2. Copy the 'videodatasets' folder to the 'vmaf' folder.
 3. Download several video clips into 'videodatasets/mov' folders, and the video MUST be encoded as h.264 format.
 4. Run 'trans.py' for transcoding 'mp4' video format to 'flv'.
-5. Run 'main.py' for generating video datasets including logs and video frames.
-6. Type 'process-vmaf.py' to generate h5py file for training.
+5. Run 'main.py' for generating video datasets including logs and video frames. If you encounter the following error,
+
+```
+Must install ffmpeg and set FFMPEG_PATH in vmaf/python/src/vmaf/externals.py, e.g. add a line like
+FFMPEG_PATH = "[path to exec]/ffmpeg"
+```
+
+run `which ffmpeg` from the commmand line to find your path to `ffmpeg` and add it to the `externals.py` file as noted.
+
+6. Run `process-vmaf.py` to generate a h5py file for training. Note this script expects frame image files from the previous step to be in a subdirectory named `img/<original_video_filename>/`. E.g., if the original file was `1.mp4`, then it expects frame image files to be under `img/1.mp4/`.
 
 ## QARC-basic
 The traditional QARC method is composed of two modules: VQPN and VQRL.
